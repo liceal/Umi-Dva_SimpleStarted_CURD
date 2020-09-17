@@ -18,7 +18,16 @@ const requestX = extend({
 });
 
 requestX.interceptors.request.use(async (url, options) => {
-  console.log(url, options);
+  // console.log(url, options);
+
+  Object.keys(options).map(v => {
+    if (v.charAt(0) === ':') {
+      delete options[v];
+    }
+  });
+
+  console.log(options);
+
   const headers = {
     'Content-Type': 'application/json',
     Accept: 'application/json',
