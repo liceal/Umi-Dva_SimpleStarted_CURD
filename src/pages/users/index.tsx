@@ -12,7 +12,7 @@ import {
   UserStateType 是 model 内导出的一个interface
 */
 import { connect, Dispatch, Loading, UserStateType } from 'umi';
-import UserModel from './components/UserModal';
+import UserModal from './components/UserModal';
 import ProTable, { ProColumns } from '@ant-design/pro-table';
 import { getRemoteList, editRecord, addRecord } from './service';
 
@@ -34,6 +34,10 @@ interface ActionType {
   clearSelected: () => void;
 }
 
+/*
+  FC function component 方法组件的意思 
+  <泛型> 接口继承
+*/
 const UserListPage: FC<UserPageProps> = ({
   users,
   dispatch,
@@ -217,7 +221,7 @@ const UserListPage: FC<UserPageProps> = ({
         pageSizeOptions={['5', '10', '20', '30']}
       />
 
-      <UserModel
+      <UserModal
         visible={modelVisible}
         closeHandler={() => {
           setModalVisible(false);
