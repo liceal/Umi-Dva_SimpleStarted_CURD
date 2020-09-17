@@ -27,14 +27,14 @@ export const getRemoteList = async (params?: {
     params: params,
   })
     .then(res => {
-      message.success('获取数据成功');
-      console.log('获取数据成功');
-      console.log(res);
+      console.log(1111, res);
 
       if (!res.data) {
         message.error('获取数据失败');
         throw new Error('数据为空');
       }
+      message.success('获取数据成功');
+      console.log('获取数据成功');
       return res;
     })
     .catch(e => {
