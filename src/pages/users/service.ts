@@ -17,27 +17,6 @@ const requestX = extend({
   prefix: 'api/', //加上api前缀 /api/users
 });
 
-requestX.interceptors.request.use(async (url, options) => {
-  // console.log(url, options);
-
-  Object.keys(options).map(v => {
-    if (v.charAt(0) === ':') {
-      delete options[v];
-    }
-  });
-
-  console.log(options);
-
-  const headers = {
-    'Content-Type': 'application/json',
-    Accept: 'application/json',
-  };
-  return {
-    url,
-    options: { ...options, headers },
-  };
-});
-
 //获取数据
 export const getRemoteList = async (params?: {
   page: number;
