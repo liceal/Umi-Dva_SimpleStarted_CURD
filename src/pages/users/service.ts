@@ -17,6 +17,18 @@ const requestX = extend({
   prefix: 'api/', //加上api前缀 /api/users
 });
 
+requestX.interceptors.request.use(async (url, options) => {
+  console.log(url, options);
+  const headers = {
+    'Content-Type': 'application/json',
+    Accept: 'application/json',
+  };
+  return {
+    url,
+    options: { ...options, headers },
+  };
+});
+
 //获取数据
 export const getRemoteList = async (params?: {
   page: number;
