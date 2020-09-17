@@ -111,7 +111,7 @@ const UserModel: UserModelType = {
   subscriptions: {
     setup({ dispatch, history }, done) {
       return history.listen(({ pathname }) => {
-        if (pathname === '/users') {
+        if (pathname === '/') {
           //在这里调用 可以直接使用事件名字，如果在外面 需要使用加上命名空间
           dispatch({
             type: 'getRemote',
