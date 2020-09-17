@@ -31,7 +31,7 @@ export const getRemoteList = async (params?: {
       console.log('获取数据成功');
       console.log(res);
 
-      if (!res) {
+      if (!res.data) {
         message.error('获取数据失败');
         throw new Error('数据为空');
       }
