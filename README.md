@@ -2,6 +2,10 @@
 > https://www.bilibili.com/video/BV1qz411z7s3
 >
 > 简单入门，参考以上UP入门教程
+>
+> https://umi-dva-simple-started-curd.vercel.app/ 部署地址
+>
+> ❌暂未解决部署上去请求状态200数据空问题
 
 项目框架Umijs框架，其中使用dva做数据流
 
