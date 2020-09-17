@@ -20,5 +20,5 @@ export default defineConfig({
     routes: [{ path: '/users', component: 'users' }]
     不写routes
   */
-  // routes: [{ path: '/users', component: '@/pages/users' }],
+  routes: [{ path: '/', component: '@/pages/users' }],
 });
